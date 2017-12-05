@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="resources/tests"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/Z003NFNV/Downloads/EPortfolioCucumberJVM-master/EPortfolioCucumberJVM-master/CucumberDemo_NoTests/externalJARS/byte-buddy-1.7.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Z003NFNV/Downloads/EPortfolioCucumberJVM-master/EPortfolioCucumberJVM-master/CucumberDemo_NoTests/externalJARS/client-combined-3.7.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Z003NFNV/Downloads/EPortfolioCucumberJVM-master/EPortfolioCucumberJVM-master/CucumberDemo_NoTests/externalJARS/client-combined-3.7.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Z003NFNV/Downloads/EPortfolioCucumberJVM-master/EPortfolioCucumberJVM-master/CucumberDemo_NoTests/externalJARS/cobertura-2.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Z003NFNV/Downloads/EPortfolioCucumberJVM-master/EPortfolioCucumberJVM-master/CucumberDemo_NoTests/externalJARS/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Z003NFNV/Downloads/EPortfolioCucumberJVM-master/EPortfolioCucumberJVM-master/CucumberDemo_NoTests/externalJARS/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Z003NFNV/Downloads/EPortfolioCucumberJVM-master/EPortfolioCucumberJVM-master/CucumberDemo_NoTests/externalJARS/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Z003NFNV/Downloads/EPortfolioCucumberJVM-master/EPortfolioCucumberJVM-master/CucumberDemo_NoTests/externalJARS/cucumber-core-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Z003NFNV/Downloads/EPortfolioCucumberJVM-master/EPortfolioCucumberJVM-master/CucumberDemo_NoTests/externalJARS/cucumber-java-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Z003NFNV/Downloads/EPortfolioCucumberJVM-master/EPortfolioCucumberJVM-master/CucumberDemo_NoTests/externalJARS/cucumber-junit-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Z003NFNV/Downloads/EPortfolioCucumberJVM-master/EPortfolioCucumberJVM-master/CucumberDemo_NoTests/externalJARS/cucumber-jvm-deps-1.0.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Z003NFNV/Downloads/EPortfolioCucumberJVM-master/EPortfolioCucumberJVM-master/CucumberDemo_NoTests/externalJARS/cucumber-reporting-3.10.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Z003NFNV/Downloads/EPortfolioCucumberJVM-master/EPortfolioCucumberJVM-master/CucumberDemo_NoTests/externalJARS/gherkin-2.12.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Z003NFNV/Downloads/EPortfolioCucumberJVM-master/EPortfolioCucumberJVM-master/CucumberDemo_NoTests/externalJARS/gson-2.8.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Z003NFNV/Downloads/EPortfolioCucumberJVM-master/EPortfolioCucumberJVM-master/CucumberDemo_NoTests/externalJARS/guava-23.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Z003NFNV/Downloads/EPortfolioCucumberJVM-master/EPortfolioCucumberJVM-master/CucumberDemo_NoTests/externalJARS/httpclient-4.5.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Z003NFNV/Downloads/EPortfolioCucumberJVM-master/EPortfolioCucumberJVM-master/CucumberDemo_NoTests/externalJARS/httpcore-4.4.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Z003NFNV/Downloads/EPortfolioCucumberJVM-master/EPortfolioCucumberJVM-master/CucumberDemo_NoTests/externalJARS/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Z003NFNV/Downloads/EPortfolioCucumberJVM-master/EPortfolioCucumberJVM-master/CucumberDemo_NoTests/externalJARS/mockito-all-2.0.2-beta.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

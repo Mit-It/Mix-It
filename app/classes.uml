@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>PHP</ID>
+  <OriginalElement>\App\User</OriginalElement>
+  <nodes>
+    <node x="3094.042763157895" y="126.5">\App\Http\Controllers\Auth\LoginController</node>
+    <node x="2046.042763157895" y="3092.0">\App\Picture</node>
+    <node x="1138.542763157895" y="40.5">\Illuminate\Contracts\Support\Arrayable</node>
+    <node x="432.3355263157896" y="3214.0">\Illuminate\Foundation\Auth\User</node>
+    <node x="3269.042763157895" y="99.0">\App\Http\Controllers\Auth\RegisterController</node>
+    <node x="2914.042763157895" y="0.0">\App\Http\Controllers\Controller</node>
+    <node x="2636.042763157895" y="126.5">\App\Http\Controllers\Auth\ResetPasswordController</node>
+    <node x="400.8355263157896" y="3584.0">\App\User</node>
+    <node x="916.5427631578949" y="27.0">\Illuminate\Contracts\Routing\UrlRoutable</node>
+    <node x="1473.542763157895" y="40.5">\JsonSerializable</node>
+    <node x="584.3750000000001" y="3119.0">\App\IngredientCombination</node>
+    <node x="2312.042763157895" y="3200.5">\App\Permission</node>
+    <node x="1118.042763157895" y="2930.0">\App\Cocktail</node>
+    <node x="1284.542763157895" y="40.5">\Illuminate\Contracts\Support\Jsonable</node>
+    <node x="2861.042763157895" y="140.0">\App\Http\Controllers\Auth\ForgotPasswordController</node>
+    <node x="1554.042763157895" y="3078.5">\App\Ingredient</node>
+    <node x="3480.042763157895" y="0.0">\App\Http\Controllers\CocktailsController</node>
+    <node x="1877.542763157895" y="0.0">\ArrayAccess</node>
+    <node x="342.0000000000001" y="1423.0">\Illuminate\Contracts\Auth\Authenticatable</node>
+    <node x="1820.042763157895" y="3132.5">\App\Unit</node>
+    <node x="1224.542763157895" y="194.0">\Illuminate\Database\Eloquent\Model</node>
+    <node x="614.0000000000001" y="1490.5">\Illuminate\Contracts\Auth\Access\Authorizable</node>
+    <node x="1653.542763157895" y="40.5">\Illuminate\Contracts\Queue\QueueableEntity</node>
+    <node x="836.3750000000001" y="3173.0">\App\Role</node>
+    <node x="0.0" y="1477.0">\Illuminate\Contracts\Auth\CanResetPassword</node>
+    <node x="2470.042763157895" y="86.0">\App\Http\Controllers\PagesController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="\App\User" target="\Illuminate\Foundation\Auth\User">
+      <point x="0.0" y="-45.0" />
+      <point x="0.0" y="18.0" />
+    </edge>
+    <edge source="\Illuminate\Foundation\Auth\User" target="\Illuminate\Contracts\Auth\Access\Authorizable">
+      <point x="8.75" y="-18.0" />
+      <point x="476.0855263157896" y="2870.0" />
+      <point x="723.0000000000001" y="2870.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="\App\Http\Controllers\PagesController" target="\App\Http\Controllers\Controller">
+      <point x="0.0" y="-72.0" />
+      <point x="2543.042763157895" y="56.0" />
+      <point x="2924.742763157895" y="56.0" />
+      <point x="-42.80000000000001" y="18.0" />
+    </edge>
+    <edge source="\App\Http\Controllers\Auth\RegisterController" target="\App\Http\Controllers\Controller">
+      <point x="0.0" y="-59.0" />
+      <point x="3352.042763157895" y="56.0" />
+      <point x="3010.3427631578948" y="56.0" />
+      <point x="42.799999999999955" y="18.0" />
+    </edge>
+    <edge source="\Illuminate\Foundation\Auth\User" target="\Illuminate\Database\Eloquent\Model">
+      <point x="26.25" y="-18.0" />
+      <point x="493.5855263157896" y="2880.0" />
+      <point x="1259.167763157895" y="2880.0" />
+      <point x="-242.375" y="1328.0" />
+    </edge>
+    <edge source="\App\IngredientCombination" target="\Illuminate\Database\Eloquent\Model">
+      <point x="-5.6843418860808015E-14" y="-113.0" />
+      <point x="700.375" y="2890.0" />
+      <point x="1328.417763157895" y="2890.0" />
+      <point x="-173.125" y="1328.0" />
+    </edge>
+    <edge source="\App\Http\Controllers\Auth\LoginController" target="\App\Http\Controllers\Controller">
+      <point x="0.0" y="-31.5" />
+      <point x="3171.542763157895" y="66.0" />
+      <point x="2988.9427631578947" y="66.0" />
+      <point x="21.399999999999977" y="18.0" />
+    </edge>
+    <edge source="\App\Permission" target="\Illuminate\Database\Eloquent\Model">
+      <point x="0.0" y="-31.5" />
+      <point x="2368.542763157895" y="2880.0" />
+      <point x="1743.917763157895" y="2880.0" />
+      <point x="242.375" y="1328.0" />
+    </edge>
+    <edge source="\App\Picture" target="\Illuminate\Database\Eloquent\Model">
+      <point x="0.0" y="-140.0" />
+      <point x="2169.042763157895" y="2890.0" />
+      <point x="1674.667763157895" y="2890.0" />
+      <point x="173.125" y="1328.0" />
+    </edge>
+    <edge source="\Illuminate\Database\Eloquent\Model" target="\Illuminate\Contracts\Support\Arrayable">
+      <point x="-138.5" y="-1328.0" />
+      <point x="1363.042763157895" y="164.0" />
+      <point x="1201.542763157895" y="164.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="\Illuminate\Database\Eloquent\Model" target="\Illuminate\Contracts\Routing\UrlRoutable">
+      <point x="-230.83333333333326" y="-1328.0" />
+      <point x="1270.7094298245615" y="174.0" />
+      <point x="1017.5427631578949" y="174.0" />
+      <point x="0.0" y="45.0" />
+    </edge>
+    <edge source="\Illuminate\Foundation\Auth\User" target="\Illuminate\Contracts\Auth\Authenticatable">
+      <point x="-8.75" y="-18.0" />
+      <point x="458.5855263157896" y="2910.0" />
+      <point x="468.0000000000001" y="2910.0" />
+      <point x="0.0" y="99.0" />
+    </edge>
+    <edge source="\Illuminate\Database\Eloquent\Model" target="\Illuminate\Contracts\Queue\QueueableEntity">
+      <point x="138.5" y="-1328.0" />
+      <point x="1640.042763157895" y="164.0" />
+      <point x="1755.542763157895" y="164.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="\App\Http\Controllers\Auth\ResetPasswordController" target="\App\Http\Controllers\Controller">
+      <point x="0.0" y="-31.5" />
+      <point x="2738.542763157895" y="66.0" />
+      <point x="2946.142763157895" y="66.0" />
+      <point x="-21.399999999999977" y="18.0" />
+    </edge>
+    <edge source="\App\Role" target="\Illuminate\Database\Eloquent\Model">
+      <point x="0.0" y="-59.0" />
+      <point x="918.8750000000001" y="2900.0" />
+      <point x="1397.667763157895" y="2900.0" />
+      <point x="-103.875" y="1328.0" />
+    </edge>
+    <edge source="\App\Http\Controllers\Auth\ForgotPasswordController" target="\App\Http\Controllers\Controller">
+      <point x="0.0" y="-18.0" />
+      <point x="0.0" y="18.0" />
+    </edge>
+    <edge source="\Illuminate\Foundation\Auth\User" target="\Illuminate\Contracts\Auth\CanResetPassword">
+      <point x="-26.25" y="-18.0" />
+      <point x="441.0855263157896" y="2910.0" />
+      <point x="161.0" y="2910.0" />
+      <point x="0.0" y="45.0" />
+    </edge>
+    <edge source="\App\Ingredient" target="\Illuminate\Database\Eloquent\Model">
+      <point x="0.0" y="-153.5" />
+      <point x="1677.042763157895" y="2910.0" />
+      <point x="1536.167763157895" y="2910.0" />
+      <point x="34.625" y="1328.0" />
+    </edge>
+    <edge source="\Illuminate\Database\Eloquent\Model" target="\ArrayAccess">
+      <point x="230.83333333333326" y="-1328.0" />
+      <point x="1732.376096491228" y="174.0" />
+      <point x="1985.542763157895" y="174.0" />
+      <point x="0.0" y="72.0" />
+    </edge>
+    <edge source="\App\Unit" target="\Illuminate\Database\Eloquent\Model">
+      <point x="0.0" y="-99.5" />
+      <point x="1923.042763157895" y="2900.0" />
+      <point x="1605.417763157895" y="2900.0" />
+      <point x="103.875" y="1328.0" />
+    </edge>
+    <edge source="\Illuminate\Database\Eloquent\Model" target="\Illuminate\Contracts\Support\Jsonable">
+      <point x="-46.16666666666663" y="-1328.0" />
+      <point x="1455.3760964912283" y="174.0" />
+      <point x="1369.042763157895" y="174.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+    <edge source="\App\Cocktail" target="\Illuminate\Database\Eloquent\Model">
+      <point x="0.0" y="-302.0" />
+      <point x="1326.042763157895" y="2910.0" />
+      <point x="1466.917763157895" y="2910.0" />
+      <point x="-34.625" y="1328.0" />
+    </edge>
+    <edge source="\Illuminate\Database\Eloquent\Model" target="\JsonSerializable">
+      <point x="46.16666666666674" y="-1328.0" />
+      <point x="1547.7094298245615" y="174.0" />
+      <point x="1553.542763157895" y="174.0" />
+      <point x="0.0" y="31.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.40000000000000013" x="1075.9999999999998" y="3280.9999999999995" />
+  <SelectedNodes>
+    <node>\App\Http\Controllers\PagesController</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
