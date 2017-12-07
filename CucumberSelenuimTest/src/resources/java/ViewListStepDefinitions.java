@@ -33,42 +33,42 @@ public class ViewListStepDefinitions {
 		driver.close();
 	}
 	
-	@Given("^User is on Home$")
+	@Given("^User is on homepage$")
 	public void user_is_on_Home() throws Throwable {
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get("http://www.facebook.de");
+		driver.get("http://hauss.web-commerce.eu/");
 	}
 	
 	@When("^User clicks on \"([^\"]*)\"$")
 	public void user_clicks_on(String arg1) throws Throwable {
-		driver.findElement(By.id(arg1)).click();
+		driver.findElement(By.xpath("//*[@id='bs-example-navbar-collapse-1']/ul/li[2]/a")).click();
 	}
 	
 	@Then("^User should be shown the Cocktails$")
 	public void user_should_be_shown_the_Cocktails() throws Throwable {
-		String statusMessageText = driver.findElement(By.id("listNo1")).getText();
+		String statusMessageText = driver.findElement(By.xpath("//*[@id='mi-list']/tbody/tr[1]/td[1]/a")).getText();
 		//assertEquals("Cocktails",statusMessageText,"");
 	}
 	
-	@Given("^User is on \"([^\"]*)\"$")
-	public void user_is_on(String arg1) throws Throwable {
-	    driver.get("http://www.facebook.de");
-	    driver.findElement(By.id(arg1));
-	    throw new PendingException();
-	}
-	
-	@When("^User enters \"([^\"]*)\"$")
-	public void user_enters(String arg1) throws Throwable {
-		driver.findElement(By.id("ID")).sendKeys(arg1);
-	}
-	
-	@Then("^User should be shown the recipe\\(s\\) for \"([^\"]*)\"$")
-	public void user_should_be_shown_the_recipe_s_for(String arg1) throws Throwable {
-		driver.findElement(By.id("ID"));	
-	}
-	
-	@Then("^User should be shown an message \"([^\"]*)\"$")
-	public void user_should_be_shown_an_message(String arg1) throws Throwable {
-		driver.findElement(By.id("ID")).getText();
-	}
+//	@Given("^User is on \"([^\"]*)\"$")
+//	public void user_is_on(String arg1) throws Throwable {
+//	    driver.get("http://www.facebook.de");
+//	    driver.findElement(By.id(arg1));
+//	    throw new PendingException();
+//	}
+//	
+//	@When("^User enters \"([^\"]*)\"$")
+//	public void user_enters(String arg1) throws Throwable {
+//		driver.findElement(By.id("ID")).sendKeys(arg1);
+//	}
+//	
+//	@Then("^User should be shown the recipe\\(s\\) for \"([^\"]*)\"$")
+//	public void user_should_be_shown_the_recipe_s_for(String arg1) throws Throwable {
+//		driver.findElement(By.id("ID"));	
+//	}
+//	
+//	@Then("^User should be shown an message \"([^\"]*)\"$")
+//	public void user_should_be_shown_an_message(String arg1) throws Throwable {
+//		driver.findElement(By.id("ID")).getText();
+//	}
 }

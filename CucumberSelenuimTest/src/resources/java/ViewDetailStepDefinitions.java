@@ -33,22 +33,62 @@ public class ViewDetailStepDefinitions {
 		driver.close();
 	}
 	
-	@Given("^User is on \"([^\"]*)\"$")
-	public void user_is_on(String arg1) throws Throwable {
+	@Given("^User is on Listpage$")
+	public void user_is_on_Listpage() throws Throwable {
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get("http://hauss.web-commerce.eu/cocktails/");
+	}
+
+	@When("^User clicks on Caipiriha$")
+	public void user_clicks_on_Caipiriha() throws Throwable {
+	    driver.findElement(By.xpath("//*[@id='mi-list']/tbody/tr[1]/td[1]/a")).click();
+	}
+
+	@Then("^User should be shown the Title$")
+	public void user_should_be_shown_the_Title() throws Throwable {
+		String statusMessageText = driver.findElement(By.xpath("/html/body/div/main/div[2]/div/h2")).getText();
+	}
+
+	@Then("^a descrition$")
+	public void a_descrition() throws Throwable {
+		String statusMessageText = driver.findElement(By.xpath("/html/body/div/main/div[2]/div/p")).getText();
+	}
+
+	@Then("^the recipe$")
+	public void the_recipe() throws Throwable {
+		String statusMessageText = driver.findElement(By.xpath("/html/body/div/main/div[2]/div/div")).getText();
+	}
+
+	@Given("^User is on Caipiriha page$")
+	public void user_is_on_Caipiriha_page() throws Throwable {
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get("http://hauss.web-commerce.eu/cocktails/");
+	    driver.findElement(By.xpath("//*[@id='mi-list']/tbody/tr[1]/td[1]/a")).click();
+	}
+
+	@When("^User clicks on Arrow Right$")
+	public void user_clicks_on_Arrow_Right() throws Throwable {
+		driver.findElement(By.xpath("/html/body/div/main/div[1]/ol/li[2]/a")).click();
+	}
+
+	@Then("^User should be shown the next picture$")
+	public void user_should_be_shown_the_next_picture() throws Throwable {
+	    String test = driver.findElement(By.xpath("/html/body/div/main/div[1]/div/ul")).getCssValue("transform");
+	    System.out.println(test);
+	}
+
+	@Given("^User opened Detail page of \"([^\"]*)\"$")
+	public void user_opened_Detail_page_of(String arg1) throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
-	@When("^User enters \"([^\"]*)\"$")
-	public void user_enters(String arg1) throws Throwable {
+	@Then("^User should not be shown a new Picture$")
+	public void user_should_not_be_shown_a_new_Picture() throws Throwable {
 	    // Write code here that turns the phrase above into concrete actions
 	    throw new PendingException();
 	}
 
-	@Then("^User should be shown the recipe\\(s\\) for \"([^\"]*)\"$")
-	public void user_should_be_shown_the_recipe_s_for(String arg1) throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new PendingException();
-	}
+
 
 }
