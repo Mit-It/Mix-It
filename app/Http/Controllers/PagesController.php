@@ -2,25 +2,53 @@
 
 namespace App\Http\Controllers;
 
+use App\Ingredient;
+use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Auth\Access\AuthorizesResources;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
+use App\Cocktail;
+use App\User;
+use App\IngredientCombination;
 
-class PagesController extends Controller
+
+
+class PagesController extends BaseController
 {
 
 
-    public function cocktails()
+    public function create()
     {
-        return view('pages.cocktails');
+
+        if(Auth::user()){
+            return view('pages.create');
+        }
+        else{
+            return view('pages.access_denied');
+        }
+
     }
+
 
     public function aboutus()
     {
         return view('pages.aboutus');
     }
 
+    public function newRecipebook()
+    {
 
-    public function login(){
-        return view('pages.login');
+        if(Auth::user()){
+            return view('pages.newRecipebook');
+        }
+        else{
+            return view('pages.access_denied');
+        }
+
     }
 
 }

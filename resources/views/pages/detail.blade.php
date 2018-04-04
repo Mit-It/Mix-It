@@ -1,90 +1,86 @@
 @extends('layouts.main')
 @section('content')
 
-    <link
+
     <div class="outer">
-        <!--
-        <div class="flexslider">
-            <ul class="slides">
-                <li>
-                    <img src="http://via.placeholder.com/150x150">
-                </li>
-                <li>
-                    <img src="http://via.placeholder.com/150x150">
-                </li>
-                <li>
-                    <img src="http://via.placeholder.com/150x150">
-                </li>
-                <li>
-                    <img src="http://via.placeholder.com/150x150">
-                </li>
-                <li>
-                    <img src="http://via.placeholder.com/150x150">
-                </li>
-                <li>
-                    <img src="http://via.placeholder.com/150x150">
-                </li>
-                <li>
-                    <img src="http://via.placeholder.com/150x150">
-                </li>
-                <li>
-                    <img src="http://via.placeholder.com/150x150">
-                </li>
-                <li>
-                    <img src="http://via.placeholder.com/150x150">
-                </li>
-                <li>
-                    <img src="http://via.placeholder.com/150x150">
-                </li>
-                <li>
-                    <img src="http://via.placeholder.com/150x150">
-                </li>
-                <li>
-                    <img src="http://via.placeholder.com/150x150">
-                </li>
-            </ul>
-        </div>
-        -->
-        <h2>{{$cocktail->title}}</h2>
-        <p>{{$cocktail->description}}</p>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="clearfix">
+                    <div class="mi-header-headline">
+                        <h2>
+                            {{$cocktail->title}}
+                        </h2>
+                    </div>
+                    <div class="mi-header-buttons">
+                        @if (Auth::user())
+                            @if (Auth::user()->role == "admin" || $cocktail->createdByUser == Auth::user())
+                                <a href="/delete_confirm/{{$cocktail->id}}">
+                                    <button class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </a>
+                            @endif
 
-        <!--
-        <h3>Zutaten</h3>
-        <dl class="knockout-around">
-            <dt>24cl</dt>
-            <dd>Cachaca</dd>
+                            <div class="mi-addToRecipebook-container dropdown">
+                                <button class="btn btn-success"
+                                        type="button"
+                                        data-toggle="dropdown"
+                                        data-target="#mi-addToRecipebook-form"
+                                        aria-haspopup="true"
+                                        aria-expanded="true">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                    Zu Rezeptbuch hinzufügen
+                                </button>
 
-            <dt>8TL</dt>
-            <dd>brauner Zucker</dd>
+                                <div id="mi-addToRecipebook-form" class="collapse">
+                                    <form action="/addToRecipebook">
+                                        <select>
+                                            @foreach(Auth::user()->recipebooks as $recipebook)
+                                                <option value="$recipebook">{{$recipebook->title}}</option>
+                                            @endforeach
+                                        </select>
+                                        <button type="submit" class="btn btn-success">
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </button>
 
-            <dt>2</dt>
-            <dd>Limetten</dd>
+                                    </form>
+                                </div>
+                            </div>
 
-            <dt>etwas</dt>
-            <dd>Crusheis</dd>
-        </dl>
--->
-        <div>
-            <h3> Zubereitung </h3>
-            <p>{{//$cocktail->makingDescription}}</p>
+                        @endif
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <p>{{$cocktail->description}}</p>
+
+                <dl class="knockout-around">
+                    @foreach($cocktail->ingredientcombinations as $combi)
+                        <dt>{{ $combi->amount }}{{$combi->ingredient->unit}}</dt>
+                        <dd>{{ $combi->ingredient->title }}</dd>
+                    @endforeach
+                </dl>
+
+                <div>
+                    <h3> Zubereitung </h3>
+                    <p>{{$cocktail->makingdescription}}</p>
+                </div>
+                <br/>
+                <p class="small-tag">
+                    Autor: {{$cocktail->createdByUser->name}} <br/>
+                    Erstellt am: {{date('d. F, Y', strtotime($cocktail->created_at))}}
+                </p>
+            </div>
+            <div class="col-md-3">
+                <div class="cocktail-img">
+                    <!--insert image -->
+                </div>
+            </div>
+
         </div>
     </div>
 
-    <script
-            src="https://code.jquery.com/jquery-2.2.4.min.js"
-            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-            crossorigin="anonymous"></script>
-    <script type="text/javascript" src="../Plugins/flexslider/woocommerce-FlexSlider-0d95828/jquery.flexslider.js"></script>
-    <script type="text/javascript">
-        $(window).load(function() {
-            $('.flexslider').flexslider({
-                animation: "slide",
-                animationLoop: false,
-                itemWidth: 150,
-                itemMargin: 5,
-                maxItems: 4
-            });
-        });
-    </script>
+@stop
 
+@section('header')
+    <link href="/css/detail.css" rel="stylesheet">
 @stop

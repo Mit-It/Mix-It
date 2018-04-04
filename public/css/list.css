@@ -2,7 +2,18 @@ a{
     color: #251157;
 }
 
-table.dataTable.no-footer {
-    border-bottom: 1px solid #111;
+div.dataTables_filter input {
+    border: 1px solid darkgrey;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+div.dataTables_length select {
+    padding: 2px;
+    border-radius: 4px;
+}
+
+a.paginate_button {
+    padding: 4px;
 }
 

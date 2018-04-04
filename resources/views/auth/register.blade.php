@@ -68,6 +68,7 @@
                                 </button>
                             </div>
                         </div>
+                        <input type="hidden" name="role" value="fe-user" />
                     </form>
                 </div>
             </div>

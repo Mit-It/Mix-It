@@ -8,22 +8,21 @@ class Cocktail extends Model
 {
 
 
-    protected $fillable = array('title', 'description');
+    protected $fillable = array('title');
 
 
-    /*
+
     public function createdByUser(){
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
 
 
     public function picture(){
-        return $this->hasOne(Picture::class);
+        return $this->hasMany(Picture::class);
     }
 
-    public function ingredientCombinations(){
+    public function ingredientcombinations(){
         return $this->hasMany(IngredientCombination::class);
     }
-    */
 
 }

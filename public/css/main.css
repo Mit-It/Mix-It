@@ -1,3 +1,84 @@
 body {
-    color: blue;
+    color: dimgrey;
+    //background: url("/img/background_bunt.jpg");
+    background: linear-gradient(to bottom right, #251157, #ff4f1a);
+}
+
+h1 {
+    font-family: fantasy;
+    color: #251157;
+}
+
+h2 {
+    font-family: fantasy;
+    font-size: 30pt;
+    color: #251157;
+}
+
+h3 {
+    font-family: fantasy;
+    font-weight: 100;
+    color: #251157;
+}
+
+.mi-primaryColor {
+    color: #251157;
+}
+
+.fs-img{
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fs-container {
+    max-width: 1100px;
+    margin:0 auto;
+    margin-top:-30px;
+    margin-left: -30px;
+    margin-right: -30px;
+    padding:0;
+}
+
+.flexslider {
+    min-height:350px;
+    margin:0;
+    border:none;
+}
+
+.navbar{
+    margin-bottom: 0;
+}
+
+.flex-direction-nav a {
+    height: 60px;
+}
+
+
+.flex-control-nav {
+    bottom: 0;
+}
+
+
+.mi-content {
+    max-width:1100px;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    box-shadow: grey;
+    padding: 30px;
+    min-height: 100vh;
+}
+
+.navbar-brand {
+    padding: 2px 2px 2px 5px;
+    height: 64px;
+}
+
+ul.navbar-nav {
+    border-right: 3px double grey;
+    border-image: linear-gradient(to bottom, #9d9d9d, rgba(0, 0, 0, 0)) 1 100%;
+}
+
+.mi-page {
 }
