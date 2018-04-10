@@ -19,20 +19,20 @@
                                 </a>
                             @endif
 
-                            <div class="mi-addToRecipebook-container dropdown">
-                                <button class="btn btn-success"
+                            <div class="mi-addToRecipebook-container">
+                                <button class="btn btn-success collapsed"
                                         type="button"
-                                        data-toggle="dropdown"
+                                        data-toggle="collapse"
                                         data-target="#mi-addToRecipebook-form"
-                                        aria-haspopup="true"
-                                        aria-expanded="true">
+                                        aria-expanded="false"
+                                        aria-controls="mi-addToRecipebook-form">
                                     <i class="fa fa-plus" aria-hidden="true"></i>
                                     Zu Rezeptbuch hinzufügen
                                 </button>
 
-                                <div id="mi-addToRecipebook-form" class="collapse">
+                                <div id="mi-addToRecipebook-form" class="collapse" aria-expanded="false">
                                     <form action="/addToRecipebook">
-                                        <select>
+                                        <select class="form-control">
                                             @foreach(Auth::user()->recipebooks as $recipebook)
                                                 <option value="$recipebook">{{$recipebook->title}}</option>
                                             @endforeach

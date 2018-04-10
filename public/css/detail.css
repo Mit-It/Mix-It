@@ -83,3 +83,13 @@ h3 {
 .mi-addToRecipebook-container {
     display: inline-block;
 }
+
+.mi-addToRecipebook-container #mi-addToRecipebook-form {
+    position: absolute;
+    border: 1px solid grey;
+    border-top: none;
+    margin-right: 15px;
+    background: lightgrey;
+    border-radius: 5px;
+    padding: 10px;
+}
