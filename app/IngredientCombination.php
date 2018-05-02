@@ -7,52 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class IngredientCombination extends Model
 {
 
-    /**
-     * @var Ingredient
-     */
-    public $ingredient;
+    protected $fillable = array('amount');
 
-    /**
-     * @var float
-     */
-    public $amount = 0.0;
-
-
-    public function ingredients(){
-        return $this->hasMany(Ingredient::class);
+    public function ingredient(){
+        return $this->belongsTo(Ingredient::class);
     }
 
-    /**
-     * @return Ingredient
-     */
-    public function getIngredient()
-    {
-        return $this->ingredient;
+    public function cocktail(){
+        return $this->belongsTo(Cocktail::class, 'cocktail_id');
     }
-
-    /**
-     * @param Ingredient $ingredient
-     */
-    public function setIngredient($ingredient)
-    {
-        $this->ingredient = $ingredient;
-    }
-
-    /**
-     * @return float
-     */
-    public function getAmount()
-    {
-        return $this->amount;
-    }
-
-    /**
-     * @param float $amount
-     */
-    public function setAmount($amount)
-    {
-        $this->amount = $amount;
-    }
-
-
 }

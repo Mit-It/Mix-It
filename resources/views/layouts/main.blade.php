@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <title>Mix-It!</title>
 
+
+    <link rel="shortcut icon" href="{{ asset('/img/logo.png') }}" >
     <link href="/css/app.css" rel="stylesheet">
     <link rel="stylesheet" href="/flexslider/flexslider.css">
     <script src="https://use.fontawesome.com/3dcf331835.js"></script>
     <link href="/css/main.css" rel="stylesheet">
+    @yield('header')
 </head>
 <body>
     <div class="mi-page">
@@ -21,48 +24,34 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Mix-It!</a>
+                    <a class="navbar-brand" href="#"><img src="{{ asset('/img/logo.png') }}" height="60px"></a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Cocktails</a></li>
-                        <li><a href="#">Über uns</a></li>
+                        <li><a href="/">Home<span class="sr-only">(current)</span></a></li>
+                        <li><a href="/cocktails">Cocktails</a></li>
+                        <li><a href="/aboutus">Über uns</a></li>
                         <li><a href="#">Impressum</a></li>
+                        @if (Auth::check())
+                            <li><a href="/recipebooks">Meine Rezeptbücher</a></li>
+                        @endif
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        @if (Auth::check())
+                            <li><a href="/logout">Logout</a></li>
+                        @else
+                            <li><a href="/login">Login</a></li>
+                            <li><a href="/register">Registrieren</a></li>
+                        @endif
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
         <main>
-            <div class="flexslider" style="height: 350px;">
-                <ul class="slides">
-                    <li>
-                        <img src="/img/cocktails1.jpg" height="350px">
-                    </li>
-                    </li>
-                    <li>
-                        <img src="/img/cocktails5.jpg" height="350px">
-                    </li>
-                    <li>
-                        <img src="/img/cocktails6.jpg" height="350px">
-                    </li>
-                    <li>
-                        <img src="/img/cocktails7.jpg" height="350px">
-                    </li>
-                    <li>
-                        <img src="/img/cocktails8.jpg" height="350px">
-                    </li>
-                    <li>
-                        <img src="/img/cocktails9.jpg" height="350px">
-                    </li>
-                </ul>
-            </div>
-            <div class="mi-content container">
-
+            <div class="mi-content">
             @yield('content')
-
             </div>
         </main>
     </div>
@@ -73,18 +62,6 @@
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
         crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<script type="text/javascript" src="/flexslider/jquery.flexslider.js"></script>
-<script type="text/javascript">
-    $(window).load(function() {
-        $('.flexslider').flexslider({
-            animation: "slide",
-            animationLoop: false,
-            itemWidth: 900,
-            itemHeight: 300,
-            itemMargin: 5,
-            maxItems: 1
-        });
-    });
-</script>
+@yield('bodyEnd')
 </body>
 </html>

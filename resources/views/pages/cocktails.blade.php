@@ -7,7 +7,11 @@
                 <th>Name</th>
 
                 <th>Beschreibung</th>
-
+                @if (Auth::user())
+                    @if (Auth::user()->role == "admin")
+                        <th></th>
+                    @endif
+                @endif
             </tr>
             </thead>
             <tbody>
@@ -15,17 +19,27 @@
                 <tr>
                     <td><a href="cocktails/{{$cocktail->id}}">{{ $cocktail->title }}</a></td>
                     <td>{{ $cocktail->description }}</td>
+                    @if (Auth::user())
+                        @if (Auth::user()->role == "admin"|| $cocktail->createdByUser == Auth::user())
+                            <td>
+                                <a href="/delete_confirm/{{$cocktail->id}}">
+                                    <button class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                                </a>
+                            </td>
+                        @endif
+                    @endif
                 </tr>
             @endforeach
-
             </tbody>
         </table>
+        @if (Auth::user())
+            <a href="/create"><button class="btn btn-default">neuer Cocktail</button></a>
+        @endif
     </div>
 
-    <script
-            src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous"></script>
+@stop
+@section('bodyEnd')
+
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
@@ -52,8 +66,13 @@
                 },
                 "ordering": true,
                 "pageLength": 5,
-                "lengthMenu": [ 5, 10, 25]
+                "lengthMenu": [ 5, 10, 25],
+
             });
         });
     </script>
+@stop
+
+@section('header')
+    <link href="/css/list.css" rel="stylesheet">
 @stop

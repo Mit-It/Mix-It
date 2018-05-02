@@ -36,6 +36,7 @@ h3 {
 
 .knockout-around {
     position: relative;
+    z-index: 3;
 }
 .knockout-around:before, .knockout-around:after {
     content: "";
@@ -47,7 +48,7 @@ h3 {
     right: -3px;
     bottom: -3px;
     background-image: -webkit-gradient(radial, left top, 10, 90% 0%, 150, from(#251157), to(transparent));
-    background-image: -webkit-radial-gradient(left top, 370px 140px, #251157, transparent);
+    background-image: -webkit-radial-gradient(left top, 40% 125%, #251157, transparent);
     background-image: -moz-radial-gradient(left top, farthest-corner, #251157 0%, transparent 72%);
     z-index: -2;
 }
@@ -56,6 +57,39 @@ h3 {
     left: 0;
     bottom: 0;
     right: 0;
-    background: white;
+    background: #f7f7f7;
     z-index: -1;
+}
+
+.small-tag {
+    font-size: 9pt;
+}
+
+.mi-addToRecipebook-form {
+    display: none;
+}
+
+.mi-header-headline {
+    display: inline-block;
+    float: left;
+}
+
+.mi-header-buttons {
+    float: right;
+    display: inline-block;
+    margin-top: 22px;
+}
+
+.mi-addToRecipebook-container {
+    display: inline-block;
+}
+
+.mi-addToRecipebook-container #mi-addToRecipebook-form {
+    position: absolute;
+    border: 1px solid grey;
+    border-top: none;
+    margin-right: 15px;
+    background: lightgrey;
+    border-radius: 5px;
+    padding: 10px;
 }
