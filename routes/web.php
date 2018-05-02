@@ -29,7 +29,7 @@ Route::post('/new_cocktail', 'CocktailsController@new_cocktail');
 Route::get('/recipebooks', 'RecipebookController@listRecipebooks');
 Route::get('/recipebooks/{recipebook}', 'RecipebookController@recipebook');
 Route::get('/newRecipebook', 'PagesController@newRecipebook');
-Route::post('/createRecipebook', 'RecipebookController@createRecipebook');
+Route::post('/createRecipebook', 'RecipebookControllerRecipebookController@createRecipebook');
 Route::get('/recipebookAddCocktail', 'RecipebookController@recpipebookAddCocktail');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');

@@ -65,7 +65,7 @@ class RecipebookController extends BaseController
 
             $recipebook->save();
 
-            return redirect()->action('CocktailsController@listRecipebooks');
+            return redirect()->action('listRecipebooks');
 
 
         }
