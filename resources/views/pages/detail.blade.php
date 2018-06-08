@@ -31,12 +31,14 @@
                                 </button>
 
                                 <div id="mi-addToRecipebook-form" class="collapse" aria-expanded="false">
-                                    <form action="/addToRecipebook">
-                                        <select class="form-control">
+                                    <form action="/addToRecipebook" method="post">
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                        <select class="form-control" name="recipebook">
                                             @foreach(Auth::user()->recipebooks as $recipebook)
-                                                <option value="$recipebook">{{$recipebook->title}}</option>
+                                                <option value="{{$recipebook->id}}">{{$recipebook->title}}</option>
                                             @endforeach
                                         </select>
+                                        <input type="hidden" value="{{$cocktail->id}}" name="cocktail" />
                                         <button type="submit" class="btn btn-success">
                                             <i class="fa fa-plus" aria-hidden="true"></i>
                                         </button>

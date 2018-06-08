@@ -43,8 +43,13 @@ class RecipebookController extends BaseController
 
     }
 
+
+    /**
+     * @param Recipebook $recipebook
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function recipebook(Recipebook $recipebook){
-        if($recipebook->user() === Auth::user()){
+        if($recipebook->user->id === Auth::user()->id){
             $cocktails = $recipebook->cocktails();
 
             return view('pages/recipebook', ['recipebook'=> $recipebook, 'cocktails' => $cocktails]);
@@ -74,4 +79,30 @@ class RecipebookController extends BaseController
         }
 
     }
+
+    /**
+     * @param Request $req
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
+     */
+    public function addCocktail(Request $req){
+        $user = Auth::user();
+
+        if($user){
+            $cocktailId = $req->input('cocktail');
+            $cocktail = Cocktail::find($cocktailId);
+            $recipebook = Recipebook::find($req->input('recipebook'));
+
+
+            $recipebook->cocktails()->attach($cocktailId);
+
+            return redirect()->action('CocktailsController@detail', ['cocktail' => $cocktail, 'user'=>$user]);
+
+
+        }
+        else {
+            return view('pages/access_denied');
+        }
+
+    }
+
 }
