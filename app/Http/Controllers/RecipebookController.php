@@ -95,7 +95,7 @@ class RecipebookController extends BaseController
 
             $recipebook->cocktails()->attach($cocktailId);
 
-            return redirect()->action('CocktailsController@detail', ['cocktail' => $cocktail, 'user'=>$user]);
+            return redirect()->action('CocktailsController@detail', ['cocktail' => $cocktail]);
 
 
         }
@@ -103,6 +103,24 @@ class RecipebookController extends BaseController
             return view('pages/access_denied');
         }
 
+    }
+
+    public function deleteCocktail(Request $req){
+        $user = Auth::user();
+
+        if($user){
+            $cocktailId = $req->input('cocktail');
+            $recipebook = Recipebook::find($req->input('recipebook'));
+
+            $recipebook->cocktails()->detach($cocktailId);
+
+            return redirect()->action('RecipebookController@recipebook', ['recipebook' => $recipebook]);
+
+
+        }
+        else {
+            return view('pages/access_denied');
+        }
     }
 
 }

@@ -32,7 +32,7 @@ Route::get('/newRecipebook', 'PagesController@newRecipebook');
 Route::post('/createRecipebook', 'RecipebookController@createRecipebook');
 Route::get('/recipebookAddCocktail', 'RecipebookController@recpipebookAddCocktail');
 Route::post('/addToRecipebook', 'RecipebookController@addCocktail');
-
+Route::post('/recipebooks/delete_cocktail', 'RecipebookController@deleteCocktail');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Auth::routes();

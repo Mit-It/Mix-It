@@ -10,7 +10,12 @@
                 </dt>
                 <dd>
                     {{$cocktail->description}}
-
+                    <form action="/recipebooks/delete_cocktail" method="post" class="mi-rp-deletecocktail">
+                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        <input type="hidden" value="{{$cocktail->id}}" name="cocktail"/>
+                        <input type="hidden" value="{{$recipebook->id}}" name="recipebook"/>
+                        <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                    </form>
                 </dd>
 
             @endforeach
