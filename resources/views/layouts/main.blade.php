@@ -51,6 +51,15 @@
         </nav>
         <main>
             <div class="mi-content">
+                @if(Session::has('warning'))
+                    <div class="alert alert-danger">{{ Session::get('warning') }}</div>
+                @endif
+                @if(Session::has('info'))
+                    <div class="alert alert-info">{{ Session::get('info') }}</div>
+                @endif
+                @if(Session::has('success'))
+                    <div class="alert alert-success" role="alert">{{ Session::get('success') }}</div>
+                @endif
             @yield('content')
             </div>
         </main>

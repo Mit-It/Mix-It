@@ -9,7 +9,6 @@
 namespace App\Http\Controllers;
 
 use App\Ingredient;
-use App\Recipebook;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
@@ -19,8 +18,8 @@ use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Cocktail;
-use App\User;
 use App\IngredientCombination;
+use Session;
 
 
 class CocktailsController extends BaseController
@@ -96,6 +95,7 @@ class CocktailsController extends BaseController
             }
 
             $cocktail->delete();
+            Session::flash('success', 'Cocktail wurde erfolgreich gelöscht');
             return redirect()->action('CocktailsController@cocktails');
         }
         else {
@@ -147,6 +147,7 @@ class CocktailsController extends BaseController
             }
             $cocktails = Cocktail::all();
 
+            Session::flash('success', 'Cocktail wurde erfolgreich erstellt');
             return redirect()->action('CocktailsController@cocktails');
 
 

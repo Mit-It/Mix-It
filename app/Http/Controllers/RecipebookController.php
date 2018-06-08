@@ -69,6 +69,8 @@ class RecipebookController extends BaseController
 
             $recipebook->save();
 
+            Session::flash('success', 'Rezeptbuch wurde erfolgreich erstellt');
+
             return redirect()->action('RecipebookController@listRecipebooks');
 
 
@@ -94,6 +96,7 @@ class RecipebookController extends BaseController
 
             $recipebook->cocktails()->attach($cocktailId);
 
+            Session::flash('success', 'Cocktail wurde erfolgreich zum Rezeptbuch hinzugefügt');
             return redirect()->action('CocktailsController@detail', ['cocktail' => $cocktail]);
 
 
@@ -117,6 +120,7 @@ class RecipebookController extends BaseController
 
             $recipebook->cocktails()->detach($cocktailId);
 
+            Session::flash('success', 'Cocktail wurde erfolgreich aus dem Rezeptbuch entfernt');
             return redirect()->action('RecipebookController@recipebook', ['recipebook' => $recipebook]);
 
 
@@ -150,6 +154,8 @@ class RecipebookController extends BaseController
         if ($recipebook->user == $user) {
 
             $recipebook->delete();
+
+            Session::flash('success', 'Rezeptbuch wurde erfolgreich gelöscht');
             return redirect()->action('RecipebookController@listRecipebooks');
         }
         else {

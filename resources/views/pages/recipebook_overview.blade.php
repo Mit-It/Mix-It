@@ -4,14 +4,14 @@
     <div class="row">
         @foreach ($recipebooks as $recipebook)
             <div class="col-md-9 col-sm-12">
-                <div class="mi-left-to-right mi-rp-overview-item">
+                <div class="mi-left-to-right mi-rb-overview-item">
                     <a href="recipebooks/{{$recipebook->id}}" class="mi-no-underline mi-rb-title">
                         <span class="mi-text-hightlight">{{$recipebook->title}}</span>
                         <a href="/delete_rb_confirm/{{$recipebook->id}}" class="mi-rb-delete">
                             <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
                         </a>
                     </a>
-                    <p>{{count($recipebook->cocktails)}} Cocktails</p>
+                    <p>{{count($recipebook->cocktails)}} Cocktail(s)</p>
                 </div>
             </div>
         @endforeach
