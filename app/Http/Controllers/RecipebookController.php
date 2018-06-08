@@ -8,7 +8,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Ingredient;
 use App\Recipebook;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\Request;
@@ -70,7 +69,7 @@ class RecipebookController extends BaseController
 
             $recipebook->save();
 
-            return redirect()->action('listRecipebooks');
+            return redirect()->action('RecipebookController@listRecipebooks');
 
 
         }
@@ -105,6 +104,10 @@ class RecipebookController extends BaseController
 
     }
 
+    /**
+     * @param Request $req
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
+     */
     public function deleteCocktail(Request $req){
         $user = Auth::user();
 
@@ -117,6 +120,37 @@ class RecipebookController extends BaseController
             return redirect()->action('RecipebookController@recipebook', ['recipebook' => $recipebook]);
 
 
+        }
+        else {
+            return view('pages/access_denied');
+        }
+    }
+
+    /**
+     * @param Recipebook $recipebook
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function deleteconfirm(Recipebook $recipebook){
+        $user = Auth::user();
+
+        if ($recipebook->user == $user) {
+            return view('pages/delete_rb_confirm', ['recipebook' => $recipebook]);
+        }
+        else {
+            return view('pages/access_denied');
+        }
+    }
+
+    /**
+     * @param Recipebook $recipebook
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function delete(Recipebook $recipebook){
+        $user = Auth::user();
+        if ($recipebook->user == $user) {
+
+            $recipebook->delete();
+            return redirect()->action('RecipebookController@listRecipebooks');
         }
         else {
             return view('pages/access_denied');
