@@ -1,0 +1,17 @@
+form.mi-rb-deletecocktail {
+    display: inline;
+    float: right;
+}
+
+div.mi-rb-cocktails {
+    margin-top: 20px;
+}
+
+.mi-rb-delete {
+    float: right;
+    margin-top:10px;
+}
+
+.mi-rb-actions {
+    margin-top:20px;
+}

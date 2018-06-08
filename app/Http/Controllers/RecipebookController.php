@@ -8,7 +8,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Ingredient;
 use App\Recipebook;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\Request;
@@ -43,8 +42,13 @@ class RecipebookController extends BaseController
 
     }
 
+
+    /**
+     * @param Recipebook $recipebook
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function recipebook(Recipebook $recipebook){
-        if($recipebook->user() === Auth::user()){
+        if($recipebook->user->id === Auth::user()->id){
             $cocktails = $recipebook->cocktails();
 
             return view('pages/recipebook', ['recipebook'=> $recipebook, 'cocktails' => $cocktails]);
@@ -65,7 +69,9 @@ class RecipebookController extends BaseController
 
             $recipebook->save();
 
-            return redirect()->action('listRecipebooks');
+            Session::flash('success', 'Rezeptbuch wurde erfolgreich erstellt');
+
+            return redirect()->action('RecipebookController@listRecipebooks');
 
 
         }
@@ -74,4 +80,87 @@ class RecipebookController extends BaseController
         }
 
     }
+
+    /**
+     * @param Request $req
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
+     */
+    public function addCocktail(Request $req){
+        $user = Auth::user();
+
+        if($user){
+            $cocktailId = $req->input('cocktail');
+            $cocktail = Cocktail::find($cocktailId);
+            $recipebook = Recipebook::find($req->input('recipebook'));
+
+
+            $recipebook->cocktails()->attach($cocktailId);
+
+            Session::flash('success', 'Cocktail wurde erfolgreich zum Rezeptbuch hinzugefügt');
+            return redirect()->action('CocktailsController@detail', ['cocktail' => $cocktail]);
+
+
+        }
+        else {
+            return view('pages/access_denied');
+        }
+
+    }
+
+    /**
+     * @param Request $req
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
+     */
+    public function deleteCocktail(Request $req){
+        $user = Auth::user();
+
+        if($user){
+            $cocktailId = $req->input('cocktail');
+            $recipebook = Recipebook::find($req->input('recipebook'));
+
+            $recipebook->cocktails()->detach($cocktailId);
+
+            Session::flash('success', 'Cocktail wurde erfolgreich aus dem Rezeptbuch entfernt');
+            return redirect()->action('RecipebookController@recipebook', ['recipebook' => $recipebook]);
+
+
+        }
+        else {
+            return view('pages/access_denied');
+        }
+    }
+
+    /**
+     * @param Recipebook $recipebook
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function deleteconfirm(Recipebook $recipebook){
+        $user = Auth::user();
+
+        if ($recipebook->user == $user) {
+            return view('pages/delete_rb_confirm', ['recipebook' => $recipebook]);
+        }
+        else {
+            return view('pages/access_denied');
+        }
+    }
+
+    /**
+     * @param Recipebook $recipebook
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function delete(Recipebook $recipebook){
+        $user = Auth::user();
+        if ($recipebook->user == $user) {
+
+            $recipebook->delete();
+
+            Session::flash('success', 'Rezeptbuch wurde erfolgreich gelöscht');
+            return redirect()->action('RecipebookController@listRecipebooks');
+        }
+        else {
+            return view('pages/access_denied');
+        }
+    }
+
 }

@@ -29,8 +29,12 @@ Route::post('/new_cocktail', 'CocktailsController@new_cocktail');
 Route::get('/recipebooks', 'RecipebookController@listRecipebooks');
 Route::get('/recipebooks/{recipebook}', 'RecipebookController@recipebook');
 Route::get('/newRecipebook', 'PagesController@newRecipebook');
-Route::post('/createRecipebook', 'RecipebookControllerRecipebookController@createRecipebook');
+Route::post('/createRecipebook', 'RecipebookController@createRecipebook');
 Route::get('/recipebookAddCocktail', 'RecipebookController@recpipebookAddCocktail');
+Route::post('/addToRecipebook', 'RecipebookController@addCocktail');
+Route::post('/recipebooks/delete_cocktail', 'RecipebookController@deleteCocktail');
+Route::get('/delete_rb_confirm/{recipebook}', 'RecipebookController@deleteconfirm');
+Route::get('/delete_rb/{recipebook}', 'RecipebookController@delete');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Auth::routes();
