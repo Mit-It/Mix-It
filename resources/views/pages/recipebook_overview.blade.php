@@ -2,9 +2,12 @@
 @section('content')
     <h1>Meine Rezeptbücher</h1>
     @foreach ($recipebooks as $recipebook)
-        <h2><a href="recipebooks/{{$recipebook->id}}" >{{$recipebook->title}}</a></h2>
-        <p>{{count($recipebook->cocktails)}} Cocktails</p>
-        <br />
+        <div class="mi-left-to-right mi-rp-overview-item">
+            <a href="recipebooks/{{$recipebook->id}}" class="mi-no-underline">
+                <span class="mi-text-hightlight">{{$recipebook->title}}</span>
+            </a>
+            <p>{{count($recipebook->cocktails)}} Cocktails</p>
+        </div>
     @endforeach
 
     <a href="/newRecipebook">

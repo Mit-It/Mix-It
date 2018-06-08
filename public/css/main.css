@@ -11,7 +11,7 @@ h1 {
 
 h2 {
     font-family: fantasy;
-    font-size: 30pt;
+    font-size: 25pt;
     color: #251157;
 }
 
@@ -21,6 +21,14 @@ h3 {
     color: #251157;
 }
 
+.mi-text-hightlight {
+    font-size: 20pt;
+    color: #251157;
+}
+
+.mi-no-underline, .mi-no-underline:hover {
+    text-decoration: none;
+}
 .mi-primaryColor {
     color: #251157;
 }
@@ -80,5 +88,24 @@ ul.navbar-nav {
     border-image: linear-gradient(to bottom, #9d9d9d, rgba(0, 0, 0, 0)) 1 100%;
 }
 
-.mi-page {
+
+
+.mi-left-to-right {
+    border-width: 3px 0 3px 3px;
+    border-style: solid;
+    -webkit-border-image:
+            -webkit-gradient(linear, 100% 0, 0 0, from(#251157), to(rgba(0, 0, 0, 0))) 1 100%;
+    -webkit-border-image:
+            -webkit-linear-gradient(right, #251157, rgba(0, 0, 0, 0)) 1 100%;
+    -moz-border-image:
+            -moz-linear-gradient(right, #251157, rgba(0, 0, 0, 0)) 1 100%;
+    -o-border-image:
+            -o-linear-gradient(right, #251157, rgba(0, 0, 0, 0)) 1 100%;
+    border-image:
+            linear-gradient(to right, #251157, rgba(0, 0, 0, 0)) 1 100%;
+
+}
+.mi-rp-overview-item {
+    padding-left: 15px;
+    border-bottom:none;
 }
