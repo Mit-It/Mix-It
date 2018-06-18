@@ -56,7 +56,7 @@ class RatingService extends BaseController
         /** @var Rating $rating */
         foreach ($user->ratings as $rating){
             if ($rating->cocktail->id == $cocktail->id){
-                $cocktailRating = $rating->value;
+                $cocktailRating = $rating;
             }
         }
 

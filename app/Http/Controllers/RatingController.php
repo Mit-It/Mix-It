@@ -43,8 +43,32 @@ class RatingController extends BaseController
             $rating->save();
 
             Session::flash('success', 'Bewertung wurde gespeichert');
-            return view('pages/detail', ['cocktail' => $cocktail, 'user'=>$user]);
+            return redirect()->action('CocktailsController@detail', ['cocktail'=>$cocktail]);
 
+
+        }
+        else {
+            return view('pages/access_denied');
+        }
+    }
+
+    /**
+     * @param Request $req
+     * @return mixed
+     */
+    public function changeRating(Request $req){
+        $user = Auth::user();
+        $rating = Rating::find($req->input("ratingId"));
+
+        if($user && $rating->createdByUser->id == $user->id){
+
+            $rating->value = $req->input('rating');
+
+            $rating->save();
+
+            $cocktail = Cocktail::find($req->input('cocktail'));
+            Session::flash('success', 'Bewertung wurde geändert');
+            return redirect()->action('CocktailsController@detail', ['cocktail'=>$cocktail]);
 
         }
         else {

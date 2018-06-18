@@ -60,7 +60,10 @@ class CocktailsController extends BaseController
      */
     public function detail(Cocktail $cocktail){
         $user = Auth::user();
-        $userRating = $this->ratingService->getRating($user, $cocktail);
+        $userRating = null;
+        if($user) {
+            $userRating = $this->ratingService->getRating($user, $cocktail);
+        }
         $rating = $this->ratingService->avgRating($cocktail);
         $ratingCount = count($cocktail->ratings());
 

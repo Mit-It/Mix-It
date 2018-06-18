@@ -37,6 +37,7 @@ Route::get('/delete_rb_confirm/{recipebook}', 'RecipebookController@deleteconfir
 Route::get('/delete_rb/{recipebook}', 'RecipebookController@delete');
 
 Route::post('/rateCocktail', 'RatingController@rateCocktail');
+Route::post('/changeRating', 'RatingController@changeRating');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Auth::routes();
