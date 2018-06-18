@@ -21,6 +21,17 @@ class PagesController extends BaseController
 {
 
 
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+    public function index(){
+
+        $user = Auth::user();
+        return view('pages.index',compact('user'));
+
+    }
+
     public function create()
     {
 
