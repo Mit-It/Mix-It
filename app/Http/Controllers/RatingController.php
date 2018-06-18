@@ -8,7 +8,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Ingredient;
 use App\Rating;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\Request;
@@ -19,7 +18,6 @@ use Illuminate\Foundation\Auth\Access\AuthorizesResources;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Cocktail;
-use App\IngredientCombination;
 use Session;
 
 
