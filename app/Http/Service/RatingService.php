@@ -33,7 +33,7 @@ class RatingService extends BaseController
         $count = 0;
         $sum = 0;
         $avg = 0;
-        foreach ($cocktail->ratings() as $rating){
+        foreach ($cocktail->ratings as $rating){
             $sum = $sum + $rating->value;
             $count++;
         }

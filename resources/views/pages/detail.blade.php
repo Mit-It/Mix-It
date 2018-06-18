@@ -10,7 +10,26 @@
                         <h2>
                             {{$cocktail->title}}
                         </h2>
-
+                        <div class="rating-show">
+                            <span id="rating-show-5"
+                                  class="rating-star {{$rating >=4.5 ? "rating-checked" : ""}}">
+                            </span>
+                            <span id="rating-show-4"
+                                  class="rating-star {{$rating >=3.5 && $rating <4.5 ? "rating-checked" : ""}}">
+                            </span>
+                            <span id="rating-show-3"
+                                  class="rating-star {{$rating >=2.5 && $rating <3.5 ? "rating-checked" : ""}}">
+                            </span>
+                            <span id="rating-show-2"
+                                  class="rating-star {{$rating >=1.5 && $rating <2.5 ? "rating-checked" : ""}}">
+                            </span>
+                            <span id="rating-show-1"
+                                  class="rating-star {{$rating <1.5 && $rating >= 1 ? "rating-checked" : ""}}">
+                            </span>
+                        </div>
+                        <p class="small-tag">
+                            {{$rating}} Sterne von 5 ({{$ratingCount}} Bewertungen)
+                        </p>
                     </div>
                     <div class="mi-header-buttons">
                         @if (Auth::user())
