@@ -24,6 +24,12 @@ use Session;
 
 class CocktailsController extends BaseController
 {
+    protected $cocktailSelectionInterface;
+
+    public function __construct(CocktailSelectionAll $cocktailSelectionInterface)
+    {
+        $this->cocktailSelectionInterface = $cocktailSelectionInterface;
+    }
 
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -32,16 +38,13 @@ class CocktailsController extends BaseController
 
         $user = Auth::user();
         return view('pages.index',compact('user'));
-
     }
 
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function cocktails(){
-
-        $cocktails =  Cocktail::all();
-
+        $cocktails =  $this->cocktailSelectionInterface.getCocktails();
 
         return view('pages/cocktails', ['cocktails' => $cocktails]);
     }
