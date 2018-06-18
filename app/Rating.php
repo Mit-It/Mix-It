@@ -15,4 +15,8 @@ class Rating extends Model
         return $this->belongsTo(Cocktail::class, 'cocktail_id');
     }
 
+    public function createdByUser(){
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
 }

@@ -25,6 +25,8 @@ use Session;
 class CocktailsController extends BaseController
 {
 
+
+
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */

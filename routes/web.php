@@ -13,7 +13,7 @@
 
 
 
-Route::get('/', 'CocktailsController@index');
+Route::get('/', 'PagesController@index');
 Route::get('/cocktails', 'CocktailsController@cocktails');
 Route::get('/aboutus', 'PagesController@aboutus');
 
@@ -35,6 +35,8 @@ Route::post('/addToRecipebook', 'RecipebookController@addCocktail');
 Route::post('/recipebooks/delete_cocktail', 'RecipebookController@deleteCocktail');
 Route::get('/delete_rb_confirm/{recipebook}', 'RecipebookController@deleteconfirm');
 Route::get('/delete_rb/{recipebook}', 'RecipebookController@delete');
+
+Route::post('/rateCocktail', 'RatingController@rateCocktail');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Auth::routes();
