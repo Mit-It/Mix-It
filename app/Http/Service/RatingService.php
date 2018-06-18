@@ -32,11 +32,14 @@ class RatingService extends BaseController
     public function avgRating(Cocktail $cocktail) {
         $count = 0;
         $sum = 0;
+        $avg = 0;
         foreach ($cocktail->ratings() as $rating){
             $sum = $sum + $rating->value;
             $count++;
         }
-        $avg = round($sum / $count, 1);
+        if ($count != 0){
+            $avg = round($sum / $count, 1);
+        }
         return $avg;
     }
 
@@ -44,17 +47,20 @@ class RatingService extends BaseController
     /**
      * @param User $user
      * @param Cocktail $cocktail
-     * @return bool
+     * @return null|Rating
      */
-    public function userRatedCocktail(User $user, Cocktail $cocktail){
-        $rated = false;
-        foreach ($user->ratings() as $rating){
+    public function getRating(User $user, Cocktail $cocktail){
+
+        $cocktailRating = null;
+
+        /** @var Rating $rating */
+        foreach ($user->ratings as $rating){
             if ($rating->cocktail->id == $cocktail->id){
-                $rated = true;
+                $cocktailRating = $rating->value;
             }
         }
 
-        return $rated;
+        return $cocktailRating;
     }
 
 }

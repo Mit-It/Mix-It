@@ -8,15 +8,9 @@
                 <div class="clearfix">
                     <div class="mi-header-headline">
                         <h2>
-                            {{$cocktail->title}}
+                            {{$cocktail->title}} {{$userRating}}
                         </h2>
-                        <div class="rating">
-                                <span for="rating-input-1-5" class="rating-star"></span>
-                                <span for="rating-input-1-4" class="rating-star"></span>
-                                <span for="rating-input-1-3" class="rating-star"></span>
-                                <span for="rating-input-1-2" class="rating-star"></span>
-                                <span for="rating-input-1-1" class="rating-star"></span>
-                        </div>
+
                     </div>
                     <div class="mi-header-buttons">
                         @if (Auth::user())
@@ -73,31 +67,38 @@
                     <h3> Zubereitung </h3>
                     <p>{{$cocktail->makingdescription}}</p>
                 </div>
+                    <div class="mi-rating">
+                        <form action="/rateCocktail" method="post">
+                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <span class="rating">
+                                        <input type="radio" class="rating-input"
+                                           id="rating-input-1-5" name="rating" value="1"
+                                        {{$userRating != null && $userRating == 1 ? "checked" : ""}}>
+                                        <input type="radio" class="rating-input"
+                                               id="rating-input-1-5" name="rating" value="1">
+                                        <label for="rating-input-1-5" class="rating-star"></label>
+                                        <input type="radio" class="rating-input"
+                                               id="rating-input-1-4" name="rating" value="2"
+                                                {{$userRating != null && $userRating == 2 ? "checked": ""}}>
+                                        <label for="rating-input-1-4" class="rating-star"></label>
+                                        <input type="radio" class="rating-input"
+                                               id="rating-input-1-3" name="rating" value="3"
+                                                {{$userRating != null && $userRating == 3 ? "checked" : ""}}>
+                                        <label for="rating-input-1-3" class="rating-star"></label>
+                                        <input type="radio" class="rating-input"
+                                               id="rating-input-1-2" name="rating" value="4"
+                                                {{$userRating != null && $userRating == 4 ? "checked" : ""}}>
+                                        <label for="rating-input-1-2" class="rating-star"></label>
+                                        <input type="radio" class="rating-input"
+                                               id="rating-input-1-1" name="rating" value="5"
+                                                {{$userRating != null && $userRating == 5 ? "checked" : ""}}>
+                                        <label for="rating-input-1-1" class="rating-star"></label>
+                                    </span>
+                            <input type="hidden" value="{{$cocktail->id}}" name="cocktail" />
+                            <input class="btn btn-sm" type="submit" value="bewerten" />
+                        </form>
+                    </div>
 
-                <div class="mi-rating">
-                    <form action="/rateCocktail" method="post">
-                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                <span class="rating">
-                                    <input type="radio" class="rating-input"
-                                           id="rating-input-1-5" name="rating" value="1">
-                                    <label for="rating-input-1-5" class="rating-star"></label>
-                                    <input type="radio" class="rating-input"
-                                           id="rating-input-1-4" name="rating" value="2">
-                                    <label for="rating-input-1-4" class="rating-star"></label>
-                                    <input type="radio" class="rating-input"
-                                           id="rating-input-1-3" name="rating" value="3">
-                                    <label for="rating-input-1-3" class="rating-star"></label>
-                                    <input type="radio" class="rating-input"
-                                           id="rating-input-1-2" name="rating" value="4">
-                                    <label for="rating-input-1-2" class="rating-star"></label>
-                                    <input type="radio" class="rating-input"
-                                           id="rating-input-1-1" name="rating" value="5">
-                                    <label for="rating-input-1-1" class="rating-star"></label>
-                                </span>
-                        <input type="hidden" value="{{$cocktail->id}}" name="cocktail" />
-                        <input class="btn btn-sm" type="submit" value="bewerten" />
-                    </form>
-                </div>
                 <hr/>
                 <p class="small-tag">
                     Autor: {{$cocktail->createdByUser->name}} <br/>
