@@ -1,1 +1,0 @@
-`<database/migrations/2014_10_12_000000_create_users_table.php 2phpX$hr<database/migrations/2014_10_12_000000_create_users_table.php

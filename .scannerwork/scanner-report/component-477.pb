@@ -1,1 +1,0 @@
-Ýresources/views/pages :ÜÞßàáâãäåæçèérresources\views\pages

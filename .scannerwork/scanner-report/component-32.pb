@@ -1,1 +1,0 @@
- app/Http/Kernel.php 2phpX=hrapp/Http/Kernel.php

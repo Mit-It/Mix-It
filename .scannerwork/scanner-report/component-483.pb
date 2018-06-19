@@ -1,1 +1,0 @@
-ã.resources/views/pages/delete_confirm.blade.php 2phpXhr.resources/views/pages/delete_confirm.blade.php

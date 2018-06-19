@@ -1,1 +1,0 @@
-l<database/migrations/2017_11_28_082617_create_roles_table.php 2phpX hr<database/migrations/2017_11_28_082617_create_roles_table.php

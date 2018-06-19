@@ -1,1 +1,0 @@
-+$app/Providers/AppServiceProvider.php 2phpXhr$app/Providers/AppServiceProvider.php

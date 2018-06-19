@@ -1,1 +1,0 @@
-app/Http/Controllers/Auth :rapp\Http\Controllers\Auth

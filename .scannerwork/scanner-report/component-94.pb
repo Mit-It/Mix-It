@@ -1,1 +1,0 @@
-^#database/factories/ModelFactory.php 2phpXhr#database/factories/ModelFactory.php

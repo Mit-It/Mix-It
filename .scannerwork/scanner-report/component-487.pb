@@ -1,1 +1,0 @@
-ç%resources/views/pages/index.blade.php 2phpX:hr%resources/views/pages/index.blade.php

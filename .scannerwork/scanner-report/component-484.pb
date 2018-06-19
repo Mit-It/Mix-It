@@ -1,1 +1,0 @@
-ä&resources/views/pages/detail.blade.php 2phpXYhr&resources/views/pages/detail.blade.php

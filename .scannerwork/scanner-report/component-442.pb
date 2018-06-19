@@ -1,1 +1,0 @@
-º;resources/Plugins/flexslider/woocommerce-FlexSlider-0d95828 :ÍÎr;resources\Plugins\flexslider\woocommerce-FlexSlider-0d95828

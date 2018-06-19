@@ -1,1 +1,0 @@
-³resources/assets/js/components :°rresources\assets\js\components
