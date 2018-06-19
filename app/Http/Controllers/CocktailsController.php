@@ -8,6 +8,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Service\RatingService;
 use App\Ingredient;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Http\Request;
@@ -24,20 +25,27 @@ use Session;
 
 class CocktailsController extends BaseController
 {
+    /**
+    *
+    * @var CocktailSelectionAll
+    */
     protected $cocktailSelectionInterface;
 
-    public function __construct(CocktailSelectionAll $cocktailSelectionInterface)
-    {
-        $this->cocktailSelectionInterface = $cocktailSelectionInterface;
-    }
+    /*
+     *
+     * @var RatingService
+     */
+    protected $ratingService;
 
     /**
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     * Create a new controller instance.
+     *
+     * @param  RatingService  $ratingService
      */
-    public function index(){
-
-        $user = Auth::user();
-        return view('pages.index',compact('user'));
+    public function __construct(RatingService $ratingService, CocktailSelectionAll $cocktailSelectionInterface)
+    {
+        $this->ratingService = $ratingService;
+        $this->cocktailSelectionInterface = $cocktailSelectionInterface;
     }
 
     /**
@@ -54,10 +62,22 @@ class CocktailsController extends BaseController
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function detail(Cocktail $cocktail){
-        $ingredients = $cocktail->ingredientcombinations;
-
         $user = Auth::user();
-        return view('pages/detail', ['cocktail' => $cocktail, 'user'=>$user]);
+        $userRating = null;
+        if($user) {
+            $userRating = $this->ratingService->getRating($user, $cocktail);
+        }
+        $rating = $this->ratingService->avgRating($cocktail);
+        $ratingCount = count($cocktail->ratings());
+
+        return view('pages/detail',
+            [
+                'cocktail' => $cocktail,
+                'user'=>$user,
+                'rating'=>$rating,
+                'userRating'=>$userRating,
+                'ratingCount'=>$ratingCount
+            ]);
 
     }
 

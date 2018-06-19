@@ -25,4 +25,8 @@ class Cocktail extends Model
         return $this->hasMany(IngredientCombination::class);
     }
 
+    public function ratings(){
+        return $this->hasMany(Rating::class);
+    }
+
 }
