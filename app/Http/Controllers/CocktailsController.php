@@ -25,9 +25,13 @@ use Session;
 
 class CocktailsController extends BaseController
 {
-
     /**
-     * The user repository implementation.
+    *
+    * @var CocktailSelectionAll
+    */
+    protected $cocktailSelectionInterface;
+
+    /*
      *
      * @var RatingService
      */
@@ -38,18 +42,17 @@ class CocktailsController extends BaseController
      *
      * @param  RatingService  $ratingService
      */
-    public function __construct(RatingService $ratingService)
+    public function __construct(RatingService $ratingService, CocktailSelectionAll $cocktailSelectionInterface)
     {
         $this->ratingService = $ratingService;
+        $this->cocktailSelectionInterface = $cocktailSelectionInterface;
     }
 
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function cocktails(){
-
-        $cocktails =  Cocktail::all();
-
+        $cocktails =  $this->cocktailSelectionInterface.getCocktails();
 
         return view('pages/cocktails', ['cocktails' => $cocktails]);
     }
