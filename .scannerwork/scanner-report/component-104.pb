@@ -1,0 +1,1 @@
+h?database/migrations/2017_11_28_082546_create_pictures_table.php 2phpX hr?database/migrations/2017_11_28_082546_create_pictures_table.php

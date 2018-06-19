@@ -1,0 +1,1 @@
+eBdatabase/migrations/2017_11_28_082327_create_ingredients_table.php 2phpX hrBdatabase/migrations/2017_11_28_082327_create_ingredients_table.php

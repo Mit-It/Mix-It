@@ -12,10 +12,10 @@ Feature: View List
 	When User clicks on "Cocktails"
 	Then User should be shown the Cocktails
 	
-#	Scenario: use valid filter
-#	Given User is on "View List"
-#	When User enters "TestCocktail1"
-#	Then User should be shown the recipe(s) for "TestCocktail1"
+	Scenario: use valid filter
+	Given User is on Listpage2
+	When User enters "TestCocktail"
+	Then User should be shown the recipe(s) for "TestCocktail"
 #	
 #	Scenario: use invalid filter
 #	Given User is on "View List"

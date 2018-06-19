@@ -10,14 +10,12 @@ Feature: View Detail
 	And a descrition
 	And the recipe
 	
-	Scenario: use Picture slider working
-	Given User is on Caipiriha page
-	When User clicks on Arrow Right
-	Then User should be shown the next picture
+#	Scenario: use Picture slider working
+#	Given User is on Caipiriha page
+#	When User clicks on Arrow Right
+#	Then User should be shown the next picture
 	
 #	Scenario: use Picture slider not working
 #	Given User opened Detail page of "TestCocktail2"
 #	When User clicks on "Arrow Right"
 #	Then User should not be shown a new Picture
-	
-	

@@ -1,0 +1,1 @@
+ÍTresources/Plugins/flexslider/woocommerce-FlexSlider-0d95828/jquery.flexslider-min.js 2jsXhrTresources/Plugins/flexslider/woocommerce-FlexSlider-0d95828/jquery.flexslider-min.js

@@ -1,0 +1,1 @@
+©public/js/detail.js 2jsXhrpublic/js/detail.js

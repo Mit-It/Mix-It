@@ -1,0 +1,153 @@
+Environment variables:
+  - =C:=C:\Users\Alex
+  - =E:=E:\Alex\Dokumente\Neuer Ordner (2)\Mix-It
+  - ADSK_CLM_WPAD_PROXY_CHECK=FALSE
+  - ALLUSERSPROFILE=C:\ProgramData
+  - APPDATA=C:\Users\Alex\AppData\Roaming
+  - COMPOSE_CONVERT_WINDOWS_PATHS=true
+  - COMPUTERNAME=ALEX-PC
+  - ComSpec=C:\WINDOWS\system32\cmd.exe
+  - CommonProgramFiles=C:\Program Files\Common Files
+  - CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+  - CommonProgramW6432=C:\Program Files\Common Files
+  - DOCKER_CERT_PATH=C:\Users\Alex\.docker\machine\machines\default
+  - DOCKER_HOST=tcp://192.168.99.100:2376
+  - DOCKER_MACHINE_NAME=default
+  - DOCKER_TLS_VERIFY=1
+  - DOCKER_TOOLBOX_INSTALL_PATH=C:\Program Files\Docker Toolbox
+  - DriverData=C:\Windows\System32\Drivers\DriverData
+  - ERROR_CODE=0
+  - FP_NO_HOST_CHECK=NO
+  - HOMEDRIVE=C:
+  - HOMEPATH=\Users\Alex
+  - JAVA_EXEC="E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\bin\..\jre\bin\java.exe"
+  - JAVA_HOME=E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\bin\..\jre
+  - LOCALAPPDATA=C:\Users\Alex\AppData\Local
+  - LOGONSERVER=\\ALEX-PC
+  - NO_PROXY=192.168.99.100
+  - NUMBER_OF_PROCESSORS=4
+  - OMP_NUM_THREADS=4
+  - OS=Windows_NT
+  - OneDrive=C:\Users\Alex\OneDrive
+  - PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+  - PROCESSOR_ARCHITECTURE=AMD64
+  - PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 94 Stepping 3, GenuineIntel
+  - PROCESSOR_LEVEL=6
+  - PROCESSOR_REVISION=5e03
+  - PROJECT_HOME=E:\Alex\Dokumente\Neuer Ordner (2)\Mix-It
+  - PROMPT=$P$G
+  - PSModulePath=C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules\;C:\Program Files\Intel\
+  - PUBLIC=C:\Users\Public
+  - Path=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\Alex\Programme\Brackets\command;C:\Program Files (x86)\Skype\Phone\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;E:\Program Files (x86)\PuTTY\;C:\Users\Alex\AppData\Local\Microsoft\WindowsApps;C:\adb;E:\Program Files (x86)\NodeJS\;E:\Program Files (x86)\apache-maven-3.5.3\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;E:\Program Files (x86)\Git\cmd;C:\Users\Alex\AppData\Local\Microsoft\WindowsApps;E:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\Alex\AppData\Roaming\npm;C:\Program Files\Docker Toolbox;E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\bin;
+  - ProgramData=C:\ProgramData
+  - ProgramFiles=C:\Program Files
+  - ProgramFiles(x86)=C:\Program Files (x86)
+  - ProgramW6432=C:\Program Files
+  - SESSIONNAME=Console
+  - SONAR_SCANNER_HOME=E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\bin\..
+  - SystemDrive=C:
+  - SystemRoot=C:\WINDOWS
+  - TEMP=C:\Users\Alex\AppData\Local\Temp
+  - TMP=C:\Users\Alex\AppData\Local\Temp
+  - USERDOMAIN=Alex-PC
+  - USERDOMAIN_ROAMINGPROFILE=Alex-PC
+  - USERNAME=Alex
+  - USERPROFILE=C:\Users\Alex
+  - VBOX_MSI_INSTALL_PATH=C:\Program Files\Oracle\VirtualBox\
+  - asl.log=Destination=file
+  - scriptdir=E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\bin
+  - use_embedded_jre=true
+  - windir=C:\WINDOWS
+  - windows_tracing_flags=3
+  - windows_tracing_logfile=C:\BVTBin\Tests\installpackage\csilogfile.log
+System properties:
+  - awt.toolkit=sun.awt.windows.WToolkit
+  - file.encoding=Cp1252
+  - file.encoding.pkg=sun.io
+  - file.separator=\
+  - java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+  - java.awt.headless=true
+  - java.awt.printerjob=sun.awt.windows.WPrinterJob
+  - java.class.path=E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\bin\..\lib\sonar-scanner-cli-3.2.0.1227.jar
+  - java.class.version=52.0
+  - java.endorsed.dirs=E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\jre\lib\endorsed
+  - java.ext.dirs=E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+  - java.home=E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\jre
+  - java.io.tmpdir=C:\Users\Alex\AppData\Local\Temp\
+  - java.library.path=E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Windows Live\Shared;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;E:\Alex\Programme\Brackets\command;C:\Program Files (x86)\Skype\Phone\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;E:\Program Files (x86)\PuTTY\;C:\Users\Alex\AppData\Local\Microsoft\WindowsApps;C:\adb;E:\Program Files (x86)\NodeJS\;E:\Program Files (x86)\apache-maven-3.5.3\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;E:\Program Files (x86)\Git\cmd;C:\Users\Alex\AppData\Local\Microsoft\WindowsApps;E:\Program Files (x86)\Microsoft VS Code\bin;C:\Users\Alex\AppData\Roaming\npm;C:\Program Files\Docker Toolbox;E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\bin;;.
+  - java.runtime.name=Java(TM) SE Runtime Environment
+  - java.runtime.version=1.8.0_121-b13
+  - java.specification.name=Java Platform API Specification
+  - java.specification.vendor=Oracle Corporation
+  - java.specification.version=1.8
+  - java.vendor=Oracle Corporation
+  - java.vendor.url=http://java.oracle.com/
+  - java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+  - java.version=1.8.0_121
+  - java.vm.info=mixed mode
+  - java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+  - java.vm.specification.name=Java Virtual Machine Specification
+  - java.vm.specification.vendor=Oracle Corporation
+  - java.vm.specification.version=1.8
+  - java.vm.vendor=Oracle Corporation
+  - java.vm.version=25.121-b13
+  - line.separator=
+
+  - os.arch=amd64
+  - os.name=Windows 10
+  - os.version=10.0
+  - path.separator=;
+  - project.home=E:\Alex\Dokumente\Neuer Ordner (2)\Mix-It
+  - scanner.home=E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\bin\..
+  - sun.arch.data.model=64
+  - sun.boot.class.path=E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\jre\lib\resources.jar;E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\jre\lib\rt.jar;E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\jre\lib\sunrsasign.jar;E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\jre\lib\jsse.jar;E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\jre\lib\jce.jar;E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\jre\lib\charsets.jar;E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\jre\lib\jfr.jar;E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\jre\classes
+  - sun.boot.library.path=E:\Alex\Dokumente\sonar-scanner-3.2.0.1227-windows\jre\bin
+  - sun.cpu.endian=little
+  - sun.cpu.isalist=amd64
+  - sun.desktop=windows
+  - sun.io.unicode.encoding=UnicodeLittle
+  - sun.java.command=org.sonarsource.scanner.cli.Main -X -Dsonar.projectKey=Mix-It -Dsonar.java.binaries=. -Dsonar.sources=. -Dsonar.host.url=http://localhost:9000 -Dsonar.login=f54e1eec39509b21ebd1df23d8ad398738c5a624
+  - sun.java.launcher=SUN_STANDARD
+  - sun.jnu.encoding=Cp1252
+  - sun.management.compiler=HotSpot 64-Bit Tiered Compilers
+  - sun.os.patch.level=
+  - sun.stderr.encoding=cp850
+  - sun.stdout.encoding=cp850
+  - user.country=DE
+  - user.dir=E:\Alex\Dokumente\Neuer Ordner (2)\Mix-It
+  - user.home=C:\Users\Alex
+  - user.language=de
+  - user.name=Alex
+  - user.script=
+  - user.timezone=Europe/Berlin
+  - user.variant=
+SonarQube plugins:
+  - SonarPython 1.10.0.2131 (python)
+  - SonarGo 1.1.0.1612 (go)
+  - Svn 1.7.0.1017 (scmsvn)
+  - SonarJS 4.1.0.6085 (javascript)
+  - SonarC# 7.2.0.5463 (csharp)
+  - SonarJava 5.4.0.14284 (java)
+  - LDAP 2.2.0.608 (ldap)
+  - Git 1.4.1.1128 (scmgit)
+  - SonarFlex 2.4.0.1222 (flex)
+  - SonarXML 1.5.1.1452 (xml)
+  - SonarPHP 2.13.0.3107 (php)
+  - SonarTS 1.7.0.2893 (typescript)
+Global properties:
+  - sonar.core.id=AWQUO3az8tui-5UYEInm
+  - sonar.core.startTime=2018-06-18T20:49:58+0200
+Settings for module: Mix-It
+  - sonar.host.url=http://localhost:9000
+  - sonar.java.binaries=.
+  - sonar.login=******
+  - sonar.projectBaseDir=E:\Alex\Dokumente\Neuer Ordner (2)\Mix-It
+  - sonar.projectKey=Mix-It
+  - sonar.projectName=Mix-It
+  - sonar.projectVersion=1.0
+  - sonar.scanner.app=ScannerCli
+  - sonar.scanner.appVersion=3.2.0.1227
+  - sonar.sourceEncoding=windows-1252
+  - sonar.sources=.
+  - sonar.verbose=true
+  - sonar.working.directory=E:\Alex\Dokumente\Neuer Ordner (2)\Mix-It\.scannerwork

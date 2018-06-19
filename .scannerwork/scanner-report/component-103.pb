@@ -1,0 +1,1 @@
+gBdatabase/migrations/2017_11_28_082514_create_permissions_table.php 2phpX hrBdatabase/migrations/2017_11_28_082514_create_permissions_table.php

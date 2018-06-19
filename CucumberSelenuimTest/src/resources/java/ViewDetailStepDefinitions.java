@@ -46,17 +46,17 @@ public class ViewDetailStepDefinitions {
 
 	@Then("^User should be shown the Title$")
 	public void user_should_be_shown_the_Title() throws Throwable {
-		String statusMessageText = driver.findElement(By.xpath("/html/body/div/main/div[2]/div/h2")).getText();
+		String statusMessageText = driver.findElement(By.xpath("/html/body/div/main/div/div/div/div[1]/div/div[1]/h2")).getText();
 	}
 
 	@Then("^a descrition$")
 	public void a_descrition() throws Throwable {
-		String statusMessageText = driver.findElement(By.xpath("/html/body/div/main/div[2]/div/p")).getText();
+		String statusMessageText = driver.findElement(By.xpath("/html/body/div/main/div/div/div/div[2]/p[1]")).getText();
 	}
 
 	@Then("^the recipe$")
 	public void the_recipe() throws Throwable {
-		String statusMessageText = driver.findElement(By.xpath("/html/body/div/main/div[2]/div/div")).getText();
+		String statusMessageText = driver.findElement(By.xpath("/html/body/div/main/div/div/div/div[2]/div/p")).getText();
 	}
 
 	@Given("^User is on Caipiriha page$")

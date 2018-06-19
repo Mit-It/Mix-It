@@ -50,22 +50,21 @@ public class ViewListStepDefinitions {
 		//assertEquals("Cocktails",statusMessageText,"");
 	}
 	
-//	@Given("^User is on \"([^\"]*)\"$")
-//	public void user_is_on(String arg1) throws Throwable {
-//	    driver.get("http://www.facebook.de");
-//	    driver.findElement(By.id(arg1));
-//	    throw new PendingException();
-//	}
-//	
-//	@When("^User enters \"([^\"]*)\"$")
-//	public void user_enters(String arg1) throws Throwable {
-//		driver.findElement(By.id("ID")).sendKeys(arg1);
-//	}
-//	
-//	@Then("^User should be shown the recipe\\(s\\) for \"([^\"]*)\"$")
-//	public void user_should_be_shown_the_recipe_s_for(String arg1) throws Throwable {
-//		driver.findElement(By.id("ID"));	
-//	}
+	@Given("^User is on Listpage2$")
+	public void user_is_on_Listpage() throws Throwable { 
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.get("http://hauss.web-commerce.eu/cocktails/");
+	}
+	
+	@When("^User enters \"([^\"]*)\"$")
+	public void user_enters(String arg1) throws Throwable {
+		driver.findElement(By.xpath("//*[@id=\"mi-list_filter\"]/label/input")).sendKeys(arg1);
+	}
+	
+	@Then("^User should be shown the recipe\\(s\\) for \"([^\"]*)\"$")
+	public void user_should_be_shown_the_recipe_s_for(String arg1) throws Throwable {
+		driver.findElement(By.xpath("//*[@id=\"mi-list\"]/tbody/tr/td[1]/a"));	
+	}
 //	
 //	@Then("^User should be shown an message \"([^\"]*)\"$")
 //	public void user_should_be_shown_an_message(String arg1) throws Throwable {

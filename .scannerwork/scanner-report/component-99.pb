@@ -1,0 +1,1 @@
+c@database/migrations/2017_11_28_081917_create_cocktails_table.php 2phpX hr@database/migrations/2017_11_28_081917_create_cocktails_table.php

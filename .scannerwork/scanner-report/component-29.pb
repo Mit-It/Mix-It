@@ -1,0 +1,1 @@
+(app/Http/Controllers/Strategy/Interfaces :r(app\Http\Controllers\Strategy\Interfaces

@@ -1,0 +1,1 @@
+0app/Http/Controllers/Auth/RegisterController.php 2phpXHhr0app/Http/Controllers/Auth/RegisterController.php

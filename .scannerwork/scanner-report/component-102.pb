@@ -1,0 +1,1 @@
+fNdatabase/migrations/2017_11_28_082430_create_ingredient_combinations_table.php 2phpX hrNdatabase/migrations/2017_11_28_082430_create_ingredient_combinations_table.php
