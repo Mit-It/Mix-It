@@ -21,6 +21,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Cocktail;
 use App\IngredientCombination;
 use Session;
+use App\Http\Controllers\Strategy\Strategies\CocktailSelectionAll;
 
 
 class CocktailsController extends BaseController
@@ -40,7 +41,8 @@ class CocktailsController extends BaseController
     /**
      * Create a new controller instance.
      *
-     * @param  RatingService  $ratingService
+     * @param  RatingService $ratingService
+     * @param CocktailSelectionAll $cocktailSelectionInterface
      */
     public function __construct(RatingService $ratingService, CocktailSelectionAll $cocktailSelectionInterface)
     {
@@ -52,7 +54,7 @@ class CocktailsController extends BaseController
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function cocktails(){
-        $cocktails =  $this->cocktailSelectionInterface.getCocktails();
+        $cocktails =  $this->cocktailSelectionInterface->getCocktails();
 
         return view('pages/cocktails', ['cocktails' => $cocktails]);
     }
@@ -68,7 +70,7 @@ class CocktailsController extends BaseController
             $userRating = $this->ratingService->getRating($user, $cocktail);
         }
         $rating = $this->ratingService->avgRating($cocktail);
-        $ratingCount = count($cocktail->ratings());
+        $ratingCount = count($cocktail->ratings);
 
         return view('pages/detail',
             [

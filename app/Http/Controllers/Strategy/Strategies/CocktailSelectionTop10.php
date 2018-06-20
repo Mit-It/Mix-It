@@ -6,7 +6,7 @@
  * Time: 12:44
  */
 
-namespace App\Http\Controllers\Strategy\Interfaces;
+namespace App\Http\Controllers\Strategy\Strategies;
 
 
 use App\Cocktail;

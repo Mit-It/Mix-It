@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use App\Cocktail;
 use App\User;
+use Session;
 
 
 class RecipebookController extends BaseController
@@ -93,10 +94,21 @@ class RecipebookController extends BaseController
             $cocktail = Cocktail::find($cocktailId);
             $recipebook = Recipebook::find($req->input('recipebook'));
 
+            $add = true;
+            foreach ($recipebook->cocktails as $cocktail){
+                if($cocktail->id == $cocktailId){
+                    $add = false;
+                    Session::flash('warning', 'Cocktail ist bereits im Rezeptbuch!');
+                }
+            }
 
-            $recipebook->cocktails()->attach($cocktailId);
+            if($add){
+                $recipebook->cocktails()->attach($cocktailId);
+                Session::flash('success', 'Cocktail wurde erfolgreich zum Rezeptbuch hinzugefügt');
+            }
 
-            Session::flash('success', 'Cocktail wurde erfolgreich zum Rezeptbuch hinzugefügt');
+
+
             return redirect()->action('CocktailsController@detail', ['cocktail' => $cocktail]);
 
 
